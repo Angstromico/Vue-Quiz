@@ -1,127 +1,143 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*,
+*::after,
+*::before {
   box-sizing: border-box;
-}
-body {
-  font-size: 20px;
-  font-family: sans-serif;
-  padding-top: 20px;
-  background: #e6ecf1;
+  font-family: 'Comic Neue', cursive;
+  font-size: bold;
 }
 
+body {
+  font-size: 18px;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+/* Container Styles */
 .ctr {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
-  box-sizing: border-box;
   position: relative;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Quiz Content Styles */
 .questions-ctr {
-  position: relative;
-  width: 100%;
+  padding: 50px;
 }
+
 .question {
-  width: 100%;
-  padding: 20px;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   text-align: center;
-  background-color: #00ca8c;
-  color: #fff;
-  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #e0e8ea;
+  color: #333;
+  margin-bottom: 15px;
 }
+
 .single-question {
   position: relative;
-  width: 100%;
 }
+
 .answer {
-  border: 1px solid #8e959f;
-  padding: 20px;
-  font-size: 18px;
-  width: 100%;
-  background-color: #fff;
-  transition: 0.2s linear all;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 10px;
 }
+
+.answer:hover {
+  background-color: #e8e8e8;
+}
+
+.answer.is-answered {
+  background-color: #d4e8bd;
+  border: 1px solid #9ccc65;
+}
+
 .answer span {
   display: inline-block;
   margin-left: 5px;
-  font-size: 0.75em;
-  font-style: italic;
+  font-size: 0.8em;
+  color: #888;
 }
+
+/* Progress Bar Styles */
 .progress {
-  height: 50px;
-  margin-top: 10px;
+  height: 10px;
   background-color: #ddd;
-  position: relative;
+  border-radius: 5px;
+  margin: 10px 0;
+  overflow: hidden;
 }
+
 .bar {
-  height: 50px;
-  background-color: #ff6372;
-  transition: all 0.3s linear;
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.3s ease-in-out;
 }
+
 .status {
   position: absolute;
-  top: 15px;
+  top: -5px;
   left: 0;
   text-align: center;
   color: #fff;
   width: 100%;
+  font-size: 12px;
 }
-.answer:not(.is-answered) {
-  cursor: pointer;
-}
-.answer:not(.is-answered):hover {
-  background-color: #8ce200;
-  border-color: #8ce200;
-  color: #fff;
+
+/* Result Styles */
+.result {
+  padding: 20px;
+  text-align: center;
 }
 
 .title {
-  width: 100%;
-  padding: 20px;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
-  text-align: center;
-  background-color: #12cbc4;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #ffc107;
   color: #fff;
-  box-sizing: border-box;
-}
-.desc {
-  border: 1px solid #8e959f;
-  padding: 20px;
-  font-size: 18px;
-  width: 100%;
-  background-color: #fff;
-  transition: 0.4s linear all;
-  text-align: center;
-}
-.fade-enter-from {
-  opacity: 0;
-}
-.fade-enter-active {
-  transition: all 0.3s linear;
-}
-.fade-leave-active {
-  transition: all 0.3s linear;
-  opacity: 0;
-  position: absolute;
-}
-.fade-leave-to {
-  opacity: 0;
+  margin-bottom: 15px;
 }
 
+.desc {
+  padding: 15px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Reset Button Styles */
 .reset-btn {
   background-color: #ff6372;
-  border: 0;
-  font-size: 22px;
+  border: none;
+  font-size: 18px;
   color: #fff;
-  padding: 10px 25px;
+  padding: 10px 20px;
   margin: 10px auto;
   display: block;
   cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
 }
 
-.result {
-  width: 100%;
+.reset-btn:hover {
+  background-color: #f44336;
 }
 
 .reset-btn:active,
