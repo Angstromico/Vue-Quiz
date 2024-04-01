@@ -25,14 +25,15 @@ const resetQuiz = () => {
 
 <template>
   <div class="ctr">
-    <Questions
-      v-if="count < questions.length"
-      :questions="questions"
-      :count="count"
-      @question-answered="questionAnswered"
-      @countered="increaseCount"
-    />
-    <Result v-else :rightAnswers="rightAnswers" :results="results" />
+    <Transition name="fade" mode="out-in">
+      <Questions
+        v-if="count < questions.length"
+        :questions="questions"
+        :count="count"
+        @question-answered="questionAnswered"
+        @countered="increaseCount" />
+      <Result v-else :rightAnswers="rightAnswers" :results="results"
+    /></Transition>
     <button
       @click.prevent="resetQuiz"
       type="button"

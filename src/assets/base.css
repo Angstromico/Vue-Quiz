@@ -1,44 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 *,
+*,
 *::after,
 *::before {
   box-sizing: border-box;
   font-family: 'Comic Neue', cursive;
-  font-size: bold;
+  font-weight: bold;
 }
 
 body {
-  font-size: 18px;
-  background-color: #f0f2f5;
-  padding: 20px;
+  font-size: 20px;
+  background-color: #f9f9f9;
+  padding: 30px;
 }
 
 /* Container Styles */
 .ctr {
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
   position: relative;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
 /* Quiz Content Styles */
 .questions-ctr {
-  padding: 50px;
+  padding: 60px;
 }
 
 .question {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   text-align: center;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #e0e8ea;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffdb58;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .single-question {
@@ -46,18 +48,18 @@ body {
 }
 
 .answer {
-  padding: 15px 20px;
-  font-size: 16px;
+  padding: 20px 25px;
+  font-size: 18px;
   border: none;
-  border-radius: 5px;
-  background-color: #f5f5f5;
+  border-radius: 8px;
+  background-color: #f0f0f0;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .answer:hover {
-  background-color: #e8e8e8;
+  background-color: #e0e0e0;
 }
 
 .answer.is-answered {
@@ -68,76 +70,76 @@ body {
 .answer span {
   display: inline-block;
   margin-left: 5px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #888;
 }
 
 /* Progress Bar Styles */
 .progress {
-  height: 10px;
+  height: 15px;
   background-color: #ddd;
-  border-radius: 5px;
-  margin: 10px 0;
+  border-radius: 8px;
+  margin: 15px 0;
   overflow: hidden;
 }
 
 .bar {
   height: 100%;
-  background-color: #4caf50;
+  background-color: #ff6b6b;
   transition: width 0.3s ease-in-out;
 }
 
 .status {
   position: absolute;
-  top: -5px;
+  top: -10px;
   left: 0;
   text-align: center;
   color: #fff;
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* Result Styles */
 .result {
-  padding: 20px;
+  padding: 30px;
   text-align: center;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #ffc107;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ff9f43;
   color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .desc {
-  padding: 15px 20px;
-  font-size: 16px;
+  padding: 20px 25px;
+  font-size: 18px;
   border: none;
-  border-radius: 5px;
-  background-color: #f5f5f5;
+  border-radius: 8px;
+  background-color: #f0f0f0;
   transition: all 0.2s ease-in-out;
 }
 
 /* Reset Button Styles */
 .reset-btn {
-  background-color: #ff6372;
+  background-color: #ff6b6b;
   border: none;
-  font-size: 18px;
+  font-size: 20px;
   color: #fff;
-  padding: 10px 20px;
-  margin: 10px auto;
+  padding: 15px 25px;
+  margin: 15px auto;
   display: block;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: all 0.2s ease-in-out;
 }
 
 .reset-btn:hover {
-  background-color: #f44336;
+  background-color: #ff4444;
 }
 
 .reset-btn:active,
@@ -145,4 +147,82 @@ body {
 .reset-btn:hover {
   border: 0;
   outline: 0;
+}
+
+/* Small screens */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .question {
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .answer {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+
+  .title {
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .desc {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+
+  .ctr {
+    padding: 15px; /* Adjust the padding for small screens */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 12px;
+  }
+
+  .question {
+    font-size: 14px;
+    padding: 7px;
+  }
+
+  .answer {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .title {
+    font-size: 14px;
+    padding: 7px;
+  }
+
+  .desc {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .ctr {
+    padding: 4px; /* Adjust the padding for small screens */
+  }
+}
+
+/* Fade animations  */
+
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: all 0.35s linear;
+}
+.fade-leave-active {
+  transition: all 0.35s linear;
+  opacity: 0;
+  position: absolute;
+}
+.fade-leave-to {
+  opacity: 0;
 }
