@@ -13,7 +13,7 @@ const ogOptions: Options = {
     title: 'Clima Ideal',
     type: 'image.png',
     image:
-      'https://crisp.chat/static/blog/content/images/2022/05/How-to-Migrate-a-large-project-from-Vue-2-to-Vue-3.jpg',
+      'https://raw.githubusercontent.com/Angstromico/Vue-Quiz/main/quiz.png',
     determiner: 'auto',
     description: 'Clima Ideal Page',
     locale: 'es',
@@ -22,7 +22,7 @@ const ogOptions: Options = {
   },
   twitter: {
     image:
-      'https://crisp.chat/static/blog/content/images/2022/05/How-to-Migrate-a-large-project-from-Vue-2-to-Vue-3.jpg',
+      'https://raw.githubusercontent.com/Angstromico/Vue-Quiz/main/quiz.png',
     imageAlt: 'twitter image alt',
   },
   facebook: {
